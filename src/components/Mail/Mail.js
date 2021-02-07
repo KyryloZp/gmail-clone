@@ -11,6 +11,9 @@ import WatchLaterIcon from '@material-ui/icons/WatchLater';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import LabelImportantIcon from '@material-ui/icons/LabelImportant';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import UnfoldMoreIcon from '@material-ui/icons/UnfoldMore';
+import PrintIcon from '@material-ui/icons/Print';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 function Mail() {
 
@@ -20,47 +23,65 @@ function Mail() {
         <div className="mail">
             <div className="mail__tools">
                 <div className="mail__toolsLeft">
-                    <IconButton onClick={ () => history.push('/') }>
-                        <ArrowBackIcon />
+                    <IconButton onClick={() => history.push('/')}>
+                        <ArrowBackIcon/>
                     </IconButton>
                     <IconButton>
-                        <MoveToInboxIcon />
-                    </IconButton>
-
-                    <IconButton>
-                        <ErrorIcon />
+                        <MoveToInboxIcon/>
                     </IconButton>
 
                     <IconButton>
-                        <DeleteIcon />
+                        <ErrorIcon/>
                     </IconButton>
 
                     <IconButton>
-                        <EmailIcon />
+                        <DeleteIcon/>
                     </IconButton>
 
                     <IconButton>
-                        <WatchLaterIcon />
+                        <EmailIcon/>
                     </IconButton>
 
                     <IconButton>
-                        <CheckCircleIcon />
+                        <WatchLaterIcon/>
                     </IconButton>
 
                     <IconButton>
-                        <LabelImportantIcon />
+                        <CheckCircleIcon/>
+                    </IconButton>
+
+                    <IconButton>
+                        <LabelImportantIcon/>
                     </IconButton>
                     <IconButton>
-                        <MoreVertIcon />
+                        <MoreVertIcon/>
                     </IconButton>
 
                 </div>
                 <div className="mail__toolsRight">
-
+                    <IconButton>
+                        <UnfoldMoreIcon/>
+                    </IconButton>
+                    <IconButton>
+                        <PrintIcon/>
+                    </IconButton>
+                    <IconButton>
+                        <ExitToAppIcon/>
+                    </IconButton>
                 </div>
             </div>
 
-            <h1>Mail page</h1>
+            <div className="mail__body">
+                <div className="mail__bodyHeader">
+                    <h2>Subject</h2>
+                    <LabelImportantIcon className="mail__important"/>
+                    <p>Title</p>
+                    <p className="mail__time" >10pm</p>
+                </div>
+                <div className="mail__message">
+                    <p>This is a message</p>
+                </div>
+            </div>
         </div>
     )
 }
